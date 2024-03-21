@@ -2,11 +2,11 @@
 
 ## TL;DR
 
-Input your prompt, get a response and save your Q&As into local Markdown files. Free to use, without API.
+Input your prompt, generate a response and save your Q&As into local Markdown files. Free to use.
 
 Current supported LLMs are:
 
-- Claude2
+- Claude 2
 - Copilot
 
 ## Requirements
@@ -18,10 +18,10 @@ Current supported LLMs are:
 
 ## Install API Packages
 
-- For Claude2:
+- For Claude 2:
   ``` pip install unofficial-claude2-api ```
 
-  More details on [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file),
+  More details on [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file).
 
 - For Copilot:
   ``` pip install sydney-py ```
@@ -30,7 +30,7 @@ Current supported LLMs are:
 
 ## How to use it?
 
-1. In `main.py`, customise your Markdown file paths for saving Q&As:
+1. In `main.py`, customise your Markdown file paths for saving Q&As to local:
 
 ``` python
 path_claude = '/example_path/examples_claude.md'
@@ -48,3 +48,11 @@ prompt = "How are you today?"
    For example: ![example](./example.png)
 
 4. Run `main.py`.
+
+## Seek help
+
+- Anything related to API packages:
+Seek help from [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file) and [vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).
+
+- Anything related to this repo:
+Create issues/discussions/PRs and let's figure it out together :)
