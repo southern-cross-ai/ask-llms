@@ -45,6 +45,6 @@ prompt = "How are you today?"
 
 3. The responses from LLMs will be printed in the terminal and saved as your local files. 
 
-   For example:![iShot_2024-03-21_19.48.17](/Users/yifan/Desktop/iShot_2024-03-21_19.48.17.png)
+   For example: ![example](./example.png)
 
 4. Run `main.py`.
