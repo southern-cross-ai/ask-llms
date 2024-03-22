@@ -1,0 +1,3 @@
+
+## What's the weather today?
+Unfortunately, I don't actually have any specific information about the weather for today, March 22nd, 2024. As an AI assistant without a connection to live weather data, I only know about weather and events up until my knowledge base was last updated in August 2023. I'd be happy to provide some general information about typical March weather if that would be helpful, but I can't give a forecast for a specific future date.
