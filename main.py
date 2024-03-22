@@ -1,6 +1,5 @@
 from ask_claude import *
 from ask_copilot import *
-import asyncio
 from utils import *
 
 
@@ -23,6 +22,3 @@ if __name__=='__main__':
             "Copilot": (path_copilot, ask_copilot)}
     
     main(LLMs)
-    
-    
-    
