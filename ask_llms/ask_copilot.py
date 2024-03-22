@@ -3,8 +3,6 @@ import io, sys, asyncio
 # https://github.com/vsakkas/sydney.py
 from sydney import SydneyClient
 
-import utils
-
 
 async def _ask_copilot(prompt):
     response = []
@@ -24,6 +22,7 @@ def ask_copilot(prompt):
         
 
 if __name__ == '__main__':
+    import utils
     path = './tests/copilot_tests.md'
     prompt = "What's the weather today?"
     print("\nGenerating from Copilot ...")

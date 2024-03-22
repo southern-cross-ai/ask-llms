@@ -5,7 +5,7 @@ from claude2_api.client import ClaudeAPIClient, SendMessageResponse
 from claude2_api.session import SessionData, get_session_data
 from claude2_api.errors import ClaudeAPIError, MessageRateLimitError, OverloadError
 
-import utils
+# import utils
 
 
 def ask_claude(prompt):

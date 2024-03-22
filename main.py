@@ -1,24 +1,26 @@
-from ask_claude import *
-from ask_copilot import *
-from utils import *
+from ask_llms import ask_copilot, ask_claude
+from ask_llms import utils
 
 
 def main(LLMs):
     for name, (path, llm) in LLMs.items():
-        print("Generating from", name)
+        print("Generating from", name, "...")
         response = llm(prompt)
-        print_qa(prompt, response)
-        save_markdown(path, prompt, response)
+        utils.print_qa(prompt, response)
+        utils.save_markdown(path, prompt, response)
     
     
 if __name__=='__main__':
-    # markdown files to save the prompts and responses
-    path_claude = '/Users/yifan/Documents/GitHub/qa-data/biased-examples/biased_examples_copilot.md'
-    path_copilot = '/Users/yifan/Documents/GitHub/qa-data/biased-examples/biased_examples_claude_3_sonnet.md'
-    # input prompt
-    prompt = "How are you today?"
+    # file paths for saving your Q&As
+    path_claude_2 = './tests/claude_2_tests.md'
+    path_copilot = './tests/copilot_tests.md'
     
-    LLMs = {"Claude": (path_claude, ask_claude), 
+    # input your prompt
+    prompt = "What day in the week is Apr 24th, 2024?"
+    
+    # LLMs that are used for generating responses
+    # keep the same structure: {LLM_name: (path_to_markdown, ask_LLM_function)}
+    LLMs = {"Claude 2": (path_claude_2, ask_claude), 
             "Copilot": (path_copilot, ask_copilot)}
     
     main(LLMs)
