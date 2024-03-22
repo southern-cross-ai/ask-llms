@@ -16,7 +16,7 @@ if __name__=='__main__':
     path_copilot = './tests/copilot_tests.md'
     
     # input your prompt
-    prompt = "What day in the week is Apr 24th, 2024?"
+    prompt = "How are you today?"
     
     # LLMs that are used for generating responses
     # keep the same structure: {LLM_name: (path_to_markdown, ask_LLM_function)}

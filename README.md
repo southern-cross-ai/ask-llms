@@ -50,14 +50,22 @@ Multiple LLMs, free to use, all at once.
 
 ## Example
 
-1. In `main.py`, customise your local Markdown paths for saving Q&As. For example:
+1. Clone the repository from URL or using SSH key:
+``` bash
+git clone https://github.com/southern-cross-ai/ask-llms.git
+```
+``` bash
+git clone git@github.com:southern-cross-ai/ask-llms.git
+```
+   
+2. In `main.py`, customise your local Markdown paths for saving Q&As. For example:
 
 ``` python
-path_claude = '/example_path/for/qa_claude.md'
-path_copilot = '/example_path/for/qa_copilot.md'
+path_claude_2 = '/example/path/for/claude_2.md'
+path_copilot = '/example/path/for/copilot.md'
 ```
 
-2. Input your prompt that will be sent to multiple LLMs. For example:
+3. Input your prompt that will be sent to multiple LLMs. For example:
 	
 ``` Python
 prompt = "How are you today?"
@@ -67,9 +75,9 @@ Your code now should look like this:
 
 ![example](./pics/example.png)
 
-3. Run `main.py`.
+4. Run `main.py`.
 
-4. Responses from LLMs will be shown in your terminal. Q&As will be saved at the local paths. For example:
+5. Responses from LLMs will be shown in your terminal, and will be saved at the local paths. For example:
 
 ![result_example](./pics/result_example.png)
 
