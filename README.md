@@ -1,58 +1,91 @@
 # Ask LLMs
 
-## TL;DR
+## TO-DOs
+- [x] Optimise `README.md`
+- [x] Add `environment.yml`
+- [ ] Change default Markdown to text
+- [ ] Add functions to transform local file formats
 
-Input your prompt, generate a response and save your Q&As into local Markdown files. Free to use.
+## Highlights
 
-Current supported LLMs are:
+Multiple LLMs, free to use, all at once. 
 
-- Claude 2
-- Copilot
+## Supported LLMs
+
+| LLM                                                          | Cookie | Free API |
+| ------------------------------------------------------------ | ------ | -------- |
+| [Claude 2](https://www.anthropic.com/news/claude-2)          | ❌      | ✅        |
+| [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) | ❌      | ✅        |
+| [ChatGPT 3.5](https://openai.com/chatgpt)                    | ❌      | ❌        |
 
 ## Requirements
 
-- Python 3.10+
-- Firefox browser installed for Claude
-- [geckodriver](https://github.com/mozilla/geckodriver) installed for Claude
-- Microsoft account for Copilot cookies (Optional)
-
-## Install API Packages
-
-- For Claude 2:
-  ``` pip install unofficial-claude2-api ```
-
-  More details on [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file).
-
+- Python 3.10 +
+- For Claude 2
+  - [Firefox Browser](https://www.mozilla.org/en-US/firefox/all/)
+  - [geckodriver](https://github.com/mozilla/geckodriver)
 - For Copilot:
-  ``` pip install sydney-py ```
+  - [Microsoft account](https://account.microsoft.com/account/manage-my-account)  (optional)
 
-  More details on  [vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).
+## Install API Packages & Environment
 
-## How to use it?
+- Install API packages separately:
 
-1. In `main.py`, customise your Markdown file paths for saving Q&As to local:
+	- For [Claude 2 API package]([st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file).): 
+
+  ``` bash
+  pip install unofficial-claude2-api
+  ```
+
+	- For  [Copilot API package]([vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).):
+
+  ``` bash
+  pip install sydney-py
+  ```
+
+- Install all dependencies through [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
+  ``` bash
+  conda env create -f environment.yml
+  ```
+
+## Example
+
+1. In `main.py`, customise your local Markdown paths for saving Q&As. For example:
 
 ``` python
-path_claude = '/example_path/examples_claude.md'
-path_copilot = '/example_path/examples_copilot.md'
+path_claude = '/example_path/for/qa_claude.md'
+path_copilot = '/example_path/for/qa_copilot.md'
 ```
 
-2. Input your prompt:
-
+2. Input your prompt that will be sent to multiple LLMs. For example:
+	
 ``` Python
 prompt = "How are you today?"
 ```
 
-3. The responses from LLMs will be printed in the terminal and saved as your local files. 
+Your code now should look like this:
 
-   For example: ![example](./example.png)
+![example](./example.png)
 
-4. Run `main.py`.
+3. Run `main.py`.
 
-## Seek help
+4. Responses from LLMs will be shown in your terminal. Q&As will be saved at the local paths. For example:
 
-- Anything related to API packages:
-Seek help from [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file) and [vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).
+![result_example](./result_example.png)
 
-- Anything related to this repo:
-Create issues/discussions/PRs and let's figure it out together :)
+## Seek Help
+
+- Anything related to Claude 2:
+
+  See more information from [st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file).
+
+- Anything related to Copilot:
+
+  See more information from [vsakkas/sydney/py](https://github.com/vsakkas/sydney.py).
+
+- Anything related to this repository:
+Feel free to create issues/discussions/PRs : )
+
+## Disclaimer
+
+The repository is free to use and for education purposes only. The repository is maintained by independent contributors who are NOT AFFILIATED with [Claude 2](https://www.anthropic.com/news/claude-2) and [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/), and all API packages are NOT OFFICIAL from [Claude 2](https://www.anthropic.com/news/claude-2) and [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/).
