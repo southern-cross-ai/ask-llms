@@ -71,7 +71,7 @@ Your code now should look like this:
 
 4. Responses from LLMs will be shown in your terminal. Q&As will be saved at the local paths. For example:
 
-![result_example](./picsresult_example.png)
+![result_example](./pics/result_example.png)
 
 ## Seek Help
 
