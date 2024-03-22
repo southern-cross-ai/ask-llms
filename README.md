@@ -65,13 +65,13 @@ prompt = "How are you today?"
 
 Your code now should look like this:
 
-![example](./example.png)
+![example](./pics/example.png)
 
 3. Run `main.py`.
 
 4. Responses from LLMs will be shown in your terminal. Q&As will be saved at the local paths. For example:
 
-![result_example](./result_example.png)
+![result_example](./picsresult_example.png)
 
 ## Seek Help
 
