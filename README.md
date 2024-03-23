@@ -4,19 +4,14 @@
 - [x] Optimise `README.md`
 - [x] Add `environment.yml`
 - [ ] Change default Markdown to text
-- [ ] Add functions to transform local file formats
+- [x] Add `Gemini`
 
 ## Highlights
 
 Multiple LLMs, free to use, all at once. 
 
 ## Supported LLMs
-
-| LLM                                                          | Cookie | Free API |
-| ------------------------------------------------------------ | ------ | -------- |
-| [Claude 2](https://www.anthropic.com/news/claude-2)          | ❌      | ✅        |
-| [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) | ❌      | ✅        |
-| [ChatGPT 3.5](https://openai.com/chatgpt)                    | ❌      | ❌        |
+[Claude 2](https://www.anthropic.com/news/claude-2) | [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) | [Gemini](https://gemini.google.com/t)
 
 ## Requirements
 
@@ -25,22 +20,35 @@ Multiple LLMs, free to use, all at once.
   - [Firefox Browser](https://www.mozilla.org/en-US/firefox/all/)
   - [geckodriver](https://github.com/mozilla/geckodriver)
 - For Copilot:
-  - [Microsoft account](https://account.microsoft.com/account/manage-my-account)  (optional)
+  - [Microsoft Account](https://account.microsoft.com/account/manage-my-account)  (optional)
+- For Gemini:
+  - [Google Account](https://www.google.com/account/about/)
 
 ## Install API Packages & Environment
 
 - Install API packages separately:
 
-	- For [Claude 2 API package]([st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api?tab=readme-ov-file).): 
+  For [Claude 2 API package]([st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api).): 
 
   ``` bash
   pip install unofficial-claude2-api
   ```
 
-	- For  [Copilot API package]([vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).):
+  For  [Copilot API package]([vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).):
 
   ``` bash
   pip install sydney-py
+  ```
+
+  For [Gemini API package](https://github.com/HanaokaYuzu/Gemini-API):
+  ``` bash
+  pip install gemini_webapi
+  ```
+  
+  The following package is optional. See more difference [here](https://github.com/HanaokaYuzu/Gemini-API?tab=readme-ov-file#initialization).
+  
+  ``` bash
+  pip install browser-cookie3
   ```
 
 - Install all dependencies through [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
@@ -61,14 +69,15 @@ git clone git@github.com:southern-cross-ai/ask-llms.git
 2. In `main.py`, customise your local Markdown paths for saving Q&As. For example:
 
 ``` python
-path_claude_2 = '/example/path/for/claude_2.md'
-path_copilot = '/example/path/for/copilot.md'
+path_claude_2 = './tests/claude_2_tests.md'
+path_copilot = './tests/copilot_tests.md'
+path_gemini = './tests/gemini_tests.md'
 ```
 
 3. Input your prompt that will be sent to multiple LLMs. For example:
 	
 ``` Python
-prompt = "How are you today?"
+prompt = "Hey LLM, introduce yourself!"
 ```
 
 Your code now should look like this:
@@ -79,7 +88,7 @@ Your code now should look like this:
 
 5. Responses from LLMs will be shown in your terminal, and will be saved at the local paths. For example:
 
-![result_example](./pics/result_example.png)
+    ![result_example](./pics/result_example.png)
 
 ## Seek Help
 
@@ -91,9 +100,13 @@ Your code now should look like this:
 
   See more information from [vsakkas/sydney/py](https://github.com/vsakkas/sydney.py).
 
+- Anything related to Gemini:
+
+  See more information from [HanaokaYuzu/Gemini-API](https://github.com/HanaokaYuzu/Gemini-API). 
+
 - Anything related to this repository:
 Feel free to create issues/discussions/PRs : )
 
 ## Disclaimer
 
-The repository is free to use and for education purposes only. The repository is maintained by independent contributors who are NOT AFFILIATED with [Claude 2](https://www.anthropic.com/news/claude-2) and [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/), and all API packages are NOT OFFICIAL from [Claude 2](https://www.anthropic.com/news/claude-2) and [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/).
+The repository is free to use and for education purposes only. The repository is maintained by independent contributors who are NOT AFFILIATED with [Claude 2](https://www.anthropic.com/news/claude-2), [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) and [Gemini](https://gemini.google.com/), and all API packages are NOT OFFICIAL from Claude 2, Copilot and Gemini.
