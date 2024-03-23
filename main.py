@@ -1,4 +1,4 @@
-from ask_llms import ask_copilot, ask_claude
+from ask_llms import ask_copilot, ask_claude, ask_gemini
 from ask_llms import utils
 
 
@@ -14,13 +14,15 @@ if __name__=='__main__':
     # file paths for saving your Q&As
     path_claude_2 = './tests/claude_2_tests.md'
     path_copilot = './tests/copilot_tests.md'
+    path_gemini = './tests/gemini_tests.md'
     
     # input your prompt
-    prompt = "How are you today?"
+    prompt = "Hey LLM, introduce yourself!"
     
     # LLMs that are used for generating responses
     # keep the same structure: {LLM_name: (path_to_markdown, ask_LLM_function)}
     LLMs = {"Claude 2": (path_claude_2, ask_claude), 
-            "Copilot": (path_copilot, ask_copilot)}
+            "Copilot": (path_copilot, ask_copilot),
+            "Gemini": (path_gemini, ask_gemini)}
     
     main(LLMs)
