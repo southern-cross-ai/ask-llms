@@ -1,32 +1,44 @@
 # Ask LLMs
 
-## TO-DOs
-- [x] Optimise `README.md`
-- [x] Add `environment.yml`
-- [ ] Change default Markdown to text
-- [x] Add `Gemini`
+## TL; DR
 
-## Highlights
+Free to use/compare multiple LLMs, save your results into your local path.
 
-Multiple LLMs, free to use, all at once. 
+## Current Supported Models
 
-## Supported LLMs
-[Claude 2](https://www.anthropic.com/news/claude-2) | [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) | [Gemini](https://gemini.google.com/t)
+| [Claude 2](https://www.anthropic.com/news/claude-2) | [Copilot](https://www.microsoft.com/en-au/microsoft-copilot/) |  [Gemini](https://gemini.google.com/t)   |
+| :-------------------------------------------------: | :----------------------------------------------------------: | :--------------------------------------: |
+|       ![Clause 2](./pics/claude-ai-icon.png)        |             ![Copilot](./pics/copilot-icon.png)              | ![Gemini](./pics/google-gemini-icon.png) |
 
-## Requirements
+## Software Requirements
 
 - Python 3.10 +
+
+---
+
 - For Claude 2
-  - [Firefox Browser](https://www.mozilla.org/en-US/firefox/all/)
-  - [geckodriver](https://github.com/mozilla/geckodriver)
+  - Install [Firefox Browser](https://www.mozilla.org/en-US/firefox/all/)
+  - Install [geckodriver](https://github.com/mozilla/geckodriver)
+  - Log into your [Claude Account](https://claude.ai/login) on Claude 2
+
+---
+
 - For Copilot:
-  - [Microsoft Account](https://account.microsoft.com/account/manage-my-account)  (optional)
+  - Log into your [Microsoft Account](https://account.microsoft.com/account/manage-my-account)  on Copilot (optional)
+
+---
+
 - For Gemini:
-  - [Google Account](https://www.google.com/account/about/)
+  - Log into your [Google Account](https://www.google.com/account/about/) on Gemini
 
 ## Install API Packages & Environment
 
-- Install API packages separately:
+- You can install all dependencies through [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
+  ``` bash
+  conda env create -f environment.yml
+  ```
+
+- Or install API packages separately:
 
   For [Claude 2 API package]([st1vms/unofficial-claude2-api](https://github.com/st1vms/unofficial-claude2-api).): 
 
@@ -34,13 +46,18 @@ Multiple LLMs, free to use, all at once.
   pip install unofficial-claude2-api
   ```
 
-  For  [Copilot API package]([vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).):
+  ---
 
+  For  [Copilot API package]([vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).):
+  
   ``` bash
   pip install sydney-py
   ```
-
+  
+  ---
+  
   For [Gemini API package](https://github.com/HanaokaYuzu/Gemini-API):
+  
   ``` bash
   pip install gemini_webapi
   ```
@@ -51,21 +68,16 @@ Multiple LLMs, free to use, all at once.
   pip install browser-cookie3
   ```
 
-- Install all dependencies through [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
-  ``` bash
-  conda env create -f environment.yml
-  ```
-
 ## Example
 
-1. Clone the repository from URL or using SSH key:
+1. Clone the repository from the URL or use the SSH key:
 ``` bash
 git clone https://github.com/southern-cross-ai/ask-llms.git
 ```
 ``` bash
 git clone git@github.com:southern-cross-ai/ask-llms.git
 ```
-   
+
 2. In `main.py`, customise your local Markdown paths for saving Q&As. For example:
 
 ``` python
@@ -98,7 +110,7 @@ Your code now should look like this:
 
 - Anything related to Copilot:
 
-  See more information from [vsakkas/sydney/py](https://github.com/vsakkas/sydney.py).
+  See more information from [vsakkas/sydney.py](https://github.com/vsakkas/sydney.py).
 
 - Anything related to Gemini:
 
